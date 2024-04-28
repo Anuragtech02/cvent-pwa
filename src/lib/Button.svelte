@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let title: string = '';
+	export let subTitle: string = '';
 	export let selected: boolean = false;
 
 	const dispatch = createEventDispatcher();
@@ -12,7 +13,7 @@
 </script>
 
 <div
-	class="relative w-full overflow-hidden -ml-4 xl:-ml-10"
+	class="btn-container relative w-full overflow-hidden -ml-4 xl:-ml-10"
 	on:click={handleClick}
 	on:keydown={(e) => e.key === 'Enter' && handleClick()}
 	tabindex="0"
@@ -27,6 +28,9 @@
 		>
 			{title}
 		</h5>
+		{#if subTitle}
+			<p class="text-center mt-1">{subTitle}</p>
+		{/if}
 	</div>
 	<video
 		src="/assets/arrow.webm"
@@ -37,3 +41,9 @@
 		loop
 	/>
 </div>
+
+<style>
+	.btn-container:hover h5 {
+		@apply text-primary;
+	}
+</style>

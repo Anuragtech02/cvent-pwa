@@ -69,7 +69,7 @@
 		>
 			<div class="relative w-[220px] xl:w-[250px] overflow-hidden">
 				<h4
-					class="absolute font-normal text-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+					class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
 				>
 					{#if type === 'event'}
 						Event <br /> Professional
@@ -77,14 +77,7 @@
 						Hospitality <br /> Professional
 					{/if}
 				</h4>
-				<video
-					src="/assets/circle.webm"
-					class="w-[300px] xl:w-[350px] max-w-[400px] -ml-10 xl:-ml-12"
-					autoplay
-					muted
-					playsinline
-					loop
-				/>
+				<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
 			</div>
 			<div class="flex-1 flex justify-between items-center">
 				{#each data as item, i}
@@ -106,6 +99,24 @@
 					{/if}
 				{/each}
 			</div>
+		</div>
+		<div
+			class="absolute top-[40%] -translate-y-1/2 right-0 w-[220px] xl:w-[250px] overflow-hidden"
+			on:click={() => goto(type === 'event' ? '/hospitality' : '/event')}
+			on:keydown={(e) => e.key === 'Enter' && goto(type === 'event' ? '/hospitality' : '/event')}
+			tabindex="0"
+			role="button"
+		>
+			<h4
+				class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
+			>
+				{#if type === 'hospitality'}
+					Event <br /> Professional
+				{:else}
+					Hospitality <br /> Professional
+				{/if}
+			</h4>
+			<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
 		</div>
 	</div>
 </PageLayout>
