@@ -101,13 +101,13 @@
 			</div>
 		</div>
 		<div
-			class="absolute top-[40%] -translate-y-1/2 right-0 w-[220px] xl:w-[250px] overflow-hidden"
-			on:click={() => goto(type === 'event' ? '/hospitality' : '/event')}
-			on:keydown={(e) => e.key === 'Enter' && goto(type === 'event' ? '/hospitality' : '/event')}
+			class="absolute top-0 left-0 w-[150px] xl:w-[180px] overflow-hidden"
+			on:click={() => goto('/')}
+			on:keydown={(e) => e.key === 'Enter' && goto('/')}
 			tabindex="0"
 			role="button"
 		>
-			<h4
+			<!-- <h4
 				class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
 			>
 				{#if type === 'hospitality'}
@@ -115,8 +115,8 @@
 				{:else}
 					Hospitality <br /> Professional
 				{/if}
-			</h4>
-			<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
+			</h4> -->
+			<video src="/assets/circle-home.webm" class="w-full" autoplay muted playsinline loop />
 		</div>
 	</div>
 </PageLayout>

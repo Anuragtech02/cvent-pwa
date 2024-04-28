@@ -3,7 +3,7 @@
 	import Button from '$lib/Button.svelte';
 	import PageLayout from '$lib/PageLayout.svelte';
 	import { fly } from 'svelte/transition';
-	import { eventsData } from '$lib/constants';
+	import { eventsData, hostpitalityData } from '$lib/constants';
 	import { goto } from '$app/navigation';
 
 	let allBtnElements: {
@@ -12,6 +12,7 @@
 	let hoverElIndex = -1;
 
 	let showButtons = false;
+	let showButtons2 = false;
 
 	onMount(() => {
 		showButtons = true;
@@ -71,6 +72,31 @@
 					Hospitality <br /> Professional
 				</h5>
 				<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
+			</div>
+			<div class="flex justifiy-between items-center">
+				{#each hostpitalityData as item, i}
+					{#if showButtons2}
+						<div
+							class="flex-1 transition-opacity duration-500 ease-out"
+							class:ml-12={i === 0}
+							class:xl:ml-10={i === 0}
+							class:opacity-50={hoverElIndex !== -1 && hoverElIndex !== i}
+							on:mouseenter={() => (hoverElIndex = i)}
+							on:mouseleave={() => (hoverElIndex = -1)}
+							role="button"
+							tabindex="0"
+							bind:this={allBtnElements[i]}
+							in:fly={{ x: -100, duration: 500, delay: i * 100 }}
+							out:fly={{ x: -100, duration: 500, delay: i * 100 }}
+						>
+							<Button
+								title={item.title}
+								subTitle={item.subTitle}
+								on:click={() => goto('/hospitality/' + item.id)}
+							/>
+						</div>
+					{/if}
+				{/each}
 			</div>
 		</div>
 	</div>

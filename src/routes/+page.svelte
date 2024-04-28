@@ -27,7 +27,6 @@
 			</h2>
 		</div>
 		<div class="relative flex flex-col justify-start items-center h-full pt-48">
-			<h3>Tap a button to start your journey</h3>
 			<img src="/assets/logo.svg" alt="logo" class="w-[500px] absolute top-1/2 -translate-y-1/2" />
 		</div>
 		<div

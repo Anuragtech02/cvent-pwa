@@ -12,6 +12,7 @@
 	let hoverElIndex = -1;
 
 	let showButtons = false;
+	let showButtons2 = false;
 
 	onMount(() => {
 		showButtons = true;
@@ -60,13 +61,13 @@
 			{/each}
 		</div>
 	</div>
-	<div class="absolute bottom-10 left-10">
+	<div class="absolute bottom-10 left-10 flex justify-start items-center">
 		<div
 			class="relative w-[220px] xl:w-[250px] overflow-hidden"
 			role="button"
 			tabindex="0"
-			on:click={() => goto('/event')}
-			on:keydown={(e) => e.key === 'Enter' && goto('/event')}
+			on:click={() => (showButtons2 = !showButtons2)}
+			on:keydown={(e) => e.key === 'Enter' && (showButtons2 = !showButtons2)}
 		>
 			<h5
 				class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
@@ -74,6 +75,31 @@
 				Event <br /> Professional
 			</h5>
 			<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
+		</div>
+		<div class="flex justifiy-between items-center">
+			{#each eventsData as item, i}
+				{#if showButtons2}
+					<div
+						class="flex-1 transition-opacity duration-500 ease-out"
+						class:ml-12={i === 0}
+						class:xl:ml-10={i === 0}
+						class:opacity-50={hoverElIndex !== -1 && hoverElIndex !== i}
+						on:mouseenter={() => (hoverElIndex = i)}
+						on:mouseleave={() => (hoverElIndex = -1)}
+						role="button"
+						tabindex="0"
+						bind:this={allBtnElements[i]}
+						in:fly={{ x: -100, duration: 500, delay: i * 100 }}
+						out:fly={{ x: -100, duration: 500, delay: i * 100 }}
+					>
+						<Button
+							title={item.title}
+							subTitle={item.subTitle}
+							on:click={() => goto('/hospitality/' + item.id)}
+						/>
+					</div>
+				{/if}
+			{/each}
 		</div>
 	</div>
 </div>

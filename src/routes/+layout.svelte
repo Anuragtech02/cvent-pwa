@@ -10,6 +10,7 @@
 		playsinline
 		autoplay
 		muted
+		loop
 		src="/assets/bg.mp4"
 		class="absolute top-0 left-0 w-screen h-screen object-cover z-[0]"
 	/>
