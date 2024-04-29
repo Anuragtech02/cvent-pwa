@@ -17,15 +17,17 @@
 		playVideoWidth = frameVideoEl?.offsetWidth;
 		playVideoHeight = frameVideoEl?.offsetHeight;
 
-		window.addEventListener('resize', () => {
-			playVideoWidth = frameVideoEl?.offsetWidth;
-			playVideoHeight = frameVideoEl?.offsetHeight;
-		});
+		// window.addEventListener('resize', () => {
+		// 	playVideoWidth = frameVideoEl?.offsetWidth;
+		// 	playVideoHeight = frameVideoEl?.offsetHeight;
+		// });
 	});
 </script>
 
-<div class="absolute top-0 left-0 w-screen h-[calc(100vh-100px-259px)] mt-[100px]">
-	<div class="absolute bottom-4 lg:bottom-6 2xl:bottom-8 left-1/2 -translate-x-1/2 z-[2]">
+<div
+	class="absolute xl:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1360px] h-[754px] scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] origin-center"
+>
+	<div class="absolute bottom-14 left-1/2 -translate-x-1/2 z-[2]">
 		<h3 class="text-xl 2xl:text-2xl">{currentItem.title}</h3>
 	</div>
 
@@ -34,7 +36,7 @@
 	>
 		<div
 			class="absolute top-[46%] left-[50%] -translate-y-1/2 -translate-x-1/2 z-[1]"
-			style="width: calc({playVideoWidth}px - 280px); height: calc({playVideoHeight}px - 150px)"
+			style="width: calc(100% - 200px); height: calc(100% - 180px);"
 		>
 			<video
 				src={currentItem.media.src}
@@ -48,9 +50,10 @@
 		<video
 			bind:this={frameVideoEl}
 			src="/assets/video-screen.webm"
-			class="h-full w-auto max-w-screen"
+			class="h-full w-full"
 			autoplay
 			muted
+			loop
 			playsinline
 		/>
 	</div>
