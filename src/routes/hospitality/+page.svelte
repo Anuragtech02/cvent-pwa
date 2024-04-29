@@ -19,14 +19,22 @@
 	});
 </script>
 
-<div class="h-full w-full relative">
-	<div class="absolute top-1/2 -translate-y-1/2 left-10 flex justify-between items-center">
+<div class="h-full w-full relative flex flex-col justify-center items-start">
+	<div class="flex justify-between items-center">
 		<div
 			class="relative w-[280px] xl:w-[350px] overflow-hidden"
 			role="button"
 			tabindex="0"
-			on:click={() => (showButtons = !showButtons)}
-			on:keydown={(e) => e.key === 'Enter' && (showButtons = !showButtons)}
+			on:click={() => {
+				showButtons2 = false;
+				showButtons = !showButtons;
+			}}
+			on:keydown={(e) => {
+				if (e.key === 'Enter') {
+					showButtons2 = false;
+					showButtons = !showButtons2;
+				}
+			}}
 		>
 			<h4
 				class="absolute font-normal text-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
@@ -61,13 +69,21 @@
 			{/each}
 		</div>
 	</div>
-	<div class="absolute bottom-10 left-10 flex justify-start items-center">
+	<div class="flex justify-start items-center">
 		<div
-			class="relative w-[220px] xl:w-[250px] overflow-hidden"
+			class="relative w-[280px] xl:w-[350px] overflow-hidden"
 			role="button"
 			tabindex="0"
-			on:click={() => (showButtons2 = !showButtons2)}
-			on:keydown={(e) => e.key === 'Enter' && (showButtons2 = !showButtons2)}
+			on:click={() => {
+				showButtons2 = !showButtons2;
+				showButtons = false;
+			}}
+			on:keydown={(e) => {
+				if (e.key === 'Enter') {
+					showButtons2 = !showButtons2;
+					showButtons = false;
+				}
+			}}
 		>
 			<h5
 				class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
@@ -76,7 +92,7 @@
 			</h5>
 			<video src="/assets/circle-new.webm" class="w-full" autoplay muted playsinline loop />
 		</div>
-		<div class="flex justifiy-between items-center">
+		<div class="flex-1 flex justifiy-between items-center">
 			{#each eventsData as item, i}
 				{#if showButtons2}
 					<div

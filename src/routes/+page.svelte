@@ -26,9 +26,9 @@
 				Event <br /> Professional
 			</h2>
 		</div>
-		<div class="relative flex flex-col justify-start items-center h-full pt-48">
-			<img src="/assets/logo.svg" alt="logo" class="w-[500px] absolute top-1/2 -translate-y-1/2" />
-		</div>
+		<!-- <div class="relative flex flex-col justify-start items-center h-full"> -->
+		<img src="/assets/logo.svg" alt="logo" class="w-[300px]" />
+		<!-- </div> -->
 		<div
 			class="relative w-[600px]"
 			role="button"
