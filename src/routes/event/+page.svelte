@@ -23,7 +23,8 @@
 	<div class="h-full w-full relative flex flex-col justify-center items-start">
 		<div class="flex justify-between items-center">
 			<div
-				class="relative w-[280px] xl:w-[350px] overflow-hidden"
+				class="relative w-[280px] xl:w-[350px] overflow-hidden transition-all duration-100 ease-out origin-left"
+				style="scale: {showButtons2 ? 0.8 : 1}"
 				role="button"
 				tabindex="0"
 				on:click={() => {
@@ -68,7 +69,8 @@
 		</div>
 		<div class="flex justify-start items-center">
 			<div
-				class="relative w-[280px] xl:w-[350px] overflow-hidden"
+				class="relative w-[280px] xl:w-[350px] overflow-hidden transition-all duration-100 ease-out origin-left"
+				style="scale: {showButtons ? 0.8 : 1}"
 				role="button"
 				tabindex="0"
 				on:click={() => {

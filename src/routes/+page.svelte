@@ -26,9 +26,10 @@
 				Event <br /> Professional
 			</h2>
 		</div>
-		<!-- <div class="relative flex flex-col justify-start items-center h-full"> -->
-		<img src="/assets/logo.svg" alt="logo" class="w-[300px]" />
-		<!-- </div> -->
+		<div class="relative text-center">
+			<img src="/assets/logo.svg" alt="logo" class="w-[500px]" />
+			<h3 class="mt-4">Select your job role to being your journey!</h3>
+		</div>
 		<div
 			class="relative w-[600px]"
 			role="button"
