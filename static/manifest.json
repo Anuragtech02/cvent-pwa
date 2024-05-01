@@ -20,6 +20,7 @@
         }
     ],
     "start_url": "/",
+    "id": "/",
     "scope": "/",
     "display": "standalone",
     "background _color": "#3E4EB8",
