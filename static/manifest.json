@@ -1,7 +1,24 @@
 {
     "name": "CVENT",
     "short_name": "CVENT",
-    "icons": [],
+    "icons": [{
+        "src": "/icons/icon-125x125.png",
+        "sizes": "125x125",
+        "type": "image/png"
+    }, {
+        "src": "/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "screenshots": [
+        {
+         "src": "/screenshots/ui-screenshot.jpeg",
+          "sizes": "640x416",
+          "type": "image/jpeg",
+          "form_factor": "wide",
+          "label": "CVENT"
+        }
+    ],
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
