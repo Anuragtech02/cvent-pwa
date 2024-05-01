@@ -28,7 +28,7 @@
 		</div>
 		<div class="relative text-center">
 			<img src="/assets/logo.svg" alt="logo" class="w-[500px]" />
-			<h3 class="mt-4">Select your job role to being your journey!</h3>
+			<h3 class="mt-4">Select your role to being your journey!</h3>
 		</div>
 		<div
 			class="relative w-[600px]"

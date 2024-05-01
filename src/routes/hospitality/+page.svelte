@@ -23,7 +23,9 @@
 	<div class="flex justify-between items-center">
 		<div
 			class="relative w-[280px] xl:w-[350px] overflow-hidden transition-all duration-100 ease-out origin-left"
-			style="scale: {showButtons2 ? 0.8 : 1}"
+			style="scale: {showButtons2 ? 0.5 : 1}"
+			class:mt-10={showButtons}
+			class:ml-10={showButtons2}
 			role="button"
 			tabindex="0"
 			on:click={() => {
@@ -72,7 +74,9 @@
 	</div>
 	<div
 		class="flex justify-start items-center transition-all duration-100 ease-out origin-left"
-		style="scale: {showButtons ? 0.8 : 1}"
+		style="scale: {showButtons ? 0.5 : 1}"
+		class:mb-10={showButtons2}
+		class:ml-10={showButtons}
 	>
 		<div
 			class="relative w-[280px] xl:w-[350px] overflow-hidden"

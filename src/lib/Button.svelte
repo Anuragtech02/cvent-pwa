@@ -43,7 +43,8 @@
 </div>
 
 <style>
-	.btn-container:hover h5 {
+	.btn-container:hover h5,
+	.btn-container:hover p {
 		@apply text-primary;
 	}
 </style>

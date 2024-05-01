@@ -42,7 +42,6 @@
 				src={currentItem.media.src}
 				class="w-full h-full object-cover z-[1]"
 				autoplay
-				muted
 				playsinline
 				loop
 			/>
