@@ -1,7 +1,8 @@
 export const eventsData = [
 	{
 		id: 1,
-		title: 'Pre-Event: Plan and Promote',
+		title: 'Pre-Event:',
+		subTitle: 'Plan and Promote',
 		media: {
 			type: 'video',
 			src: '/assets/content/event/1/video.mp4'
@@ -9,7 +10,8 @@ export const eventsData = [
 	},
 	{
 		id: 2,
-		title: 'During Your Event: Attendee Engagement',
+		title: 'During Your Event:',
+		subTitle: 'Attendee Engagement',
 		media: {
 			type: 'video',
 			src: '/assets/content/event/2/video.mp4'
@@ -17,7 +19,8 @@ export const eventsData = [
 	},
 	{
 		id: 3,
-		title: 'Post-Event: Spend & Analysis',
+		title: 'Post-Event:',
+		subTitle: 'Spend & Analysis',
 		media: {
 			type: 'video',
 			src: '/assets/content/event/3/video.mp4'
@@ -25,7 +28,8 @@ export const eventsData = [
 	},
 	{
 		id: 4,
-		title: 'Always on Engagement: Nurture',
+		title: 'Always on Engagement:',
+		subTitle: 'Nurture',
 		media: {
 			type: 'video',
 			src: '/assets/content/event/4/video.mp4'

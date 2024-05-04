@@ -67,7 +67,7 @@
 			role="button"
 			tabindex="0"
 		>
-			<div class="relative w-[220px] xl:w-[250px] overflow-hidden">
+			<div class="relative w-[220px] xl:w-[250px] 3xl:w-[20%] overflow-hidden">
 				<h4
 					class="absolute font-normal text-center top-1/2 left-[48%] -translate-y-1/2 -translate-x-1/2"
 				>
@@ -84,14 +84,13 @@
 					{#if showButtons}
 						<div
 							class="flex-1 transition-opacity duration-500 ease-out"
-							class:ml-12={i === 0}
-							class:xl:ml-10={i === 0}
 							bind:this={allBtnElements[i]}
 							in:fly={{ x: -100, duration: 500, delay: i * 100 }}
 							out:fly={{ x: -100, duration: 500, delay: i * 100 }}
 						>
 							<Button
 								title={item.title}
+								subTitle={item.subTitle}
 								selected={currentItem?.id === item.id}
 								on:click={() => goto(`/${type}/${item.id}`)}
 							/>
@@ -101,7 +100,7 @@
 			</div>
 		</div>
 		<div
-			class="absolute top-0 left-0 w-[150px] xl:w-[180px] overflow-hidden"
+			class="absolute top-0 left-0 w-[150px] xl:w-[180px] 3xl:w-[10%] overflow-hidden"
 			on:click={() => goto('/')}
 			on:keydown={(e) => e.key === 'Enter' && goto('/')}
 			tabindex="0"
