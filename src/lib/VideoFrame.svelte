@@ -4,6 +4,7 @@
 	export let currentItem: {
 		id: number;
 		title: string;
+		subTitle?: string;
 		media: {
 			type: string;
 			src: string;
@@ -25,15 +26,19 @@
 </script>
 
 <div
-	class="absolute top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1360px] h-[754px] scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[1.25] 4xl:scale-[1.6] origin-center"
+	class="absolute top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1360px] h-[754px] scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[1.05] 4xl:scale-[1.4] 5xl:scale-[2] origin-center"
 >
 	<div class="absolute bottom-14 left-1/2 -translate-x-1/2 z-[2]">
-		<h3 class="text-xl 2xl:text-2xl">{currentItem.title}</h3>
+		<h3 class="text-xl 2xl:text-2xl">
+			{currentItem.title}
+			{(currentItem.title?.includes(':') ? '' : ': ') + currentItem?.subTitle || ''}
+		</h3>
 	</div>
 
 	<div
 		class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full flex justify-center items-center"
 	>
+		s
 		<div
 			class="absolute top-[46%] left-[50%] -translate-y-1/2 -translate-x-1/2 z-[1]"
 			style="width: calc(100% - 200px); height: calc(100% - 180px);"
