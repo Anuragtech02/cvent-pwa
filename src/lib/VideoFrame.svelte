@@ -26,7 +26,7 @@
 </script>
 
 <div
-	class="absolute top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1360px] h-[754px] scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[1.05] 4xl:scale-[1.4] 5xl:scale-[2] origin-center"
+	class="absolute top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1360px] h-[754px] scale-[0.5] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.9] 3xl:scale-[1.05] 4xl:scale-[1.3] 5xl:scale-[1.9] origin-center"
 >
 	<div class="absolute bottom-14 left-1/2 -translate-x-1/2 z-[2]">
 		<h3 class="text-xl 2xl:text-2xl">
