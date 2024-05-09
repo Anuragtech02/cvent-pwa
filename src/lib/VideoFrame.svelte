@@ -38,7 +38,6 @@
 	<div
 		class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full flex justify-center items-center"
 	>
-		s
 		<div
 			class="absolute top-[46%] left-[50%] -translate-y-1/2 -translate-x-1/2 z-[1]"
 			style="width: calc(100% - 200px); height: calc(100% - 180px);"
